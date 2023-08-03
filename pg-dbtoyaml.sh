@@ -1,7 +1,7 @@
 #! /bin/bash
 # read env file 
-set -a; source ../../.env; set +a;
-OUTPUTFILE="../snapshot/DB.yaml"
+set -a; source ../.env; set +a;
+OUTPUTFILE="../DB.yaml"
 
 # Create a snapshot of your dev DB
 #dbtoyaml --host $DB_HOST --port $DB_PORT --username $DB_USER --password $DB_DATABASE > $OUTPUTFILE

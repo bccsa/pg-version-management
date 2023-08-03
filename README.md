@@ -4,9 +4,9 @@ These scripts used for veriosn managmnet op a postgres DB
 ## prerequisite
 1. python (https://www.python.org/downloads/)
 2. expect (Debian: apt-get update && apt-get install -y expect; Mac: sudo port install expect;)
-3. psql (apt-get update && apt-get install -y postgresql-client)
+3. psql (apt-get update && apt-get install -y postgresql-client; Mac: brew install postgresql@14)
 4. pyrseas (https://pyrseas.readthedocs.io/en/latest/install.html)
-5. pip install psycopg2
+5. pip3 install psycopg2
 6. pip3 install psycopg_c
 7. pip3 install psycopg_binary
 8. pip3 install libpq
@@ -20,8 +20,8 @@ These scripts used for veriosn managmnet op a postgres DB
 
 ## [Link to Pyrseas docs](https://pyrseas.readthedocs.io/_/downloads/en/latest/pdf/)
 * The following scripts is used for:
-1. Create a yaml snapshot of a db and store it [here](../snapshot/CMS-DB.yaml)
-2. Create a diff between the [snapshot](../snapshot/DB.yaml) and a destenation DB using the snapshot form 1. and saving it [here](../snapshot/DB-DIFF.sql)
+1. Create a yaml snapshot of a db and store it in the root folder as a yaml file
+2. Create a diff between the snapshot stored in the root folder and a destenation DB using the snapshot form 1. and saving it the root folder as a sql file 
 3. Create & update a destenation DB (this step runs step 2. and 3. in one script)
 
 ## 1. [pg-dbtoyaml.sh](./pg-dbtoyaml.sh)
